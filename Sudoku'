@@ -1,18 +1,39 @@
 class Solution:
-  def isValidSudoku(self, board: list[list[str]]) -> bool:
-    seen = set()
 
-    for i in range(9):
-      for j in range(9):
-        c = board[i][j]
-        if c == '.':
-          continue
-        if (c + '@row ' + str(i) in seen or
-            c + '@col ' + str(j) in seen or
-                c + '@box ' + str(i // 3) + str(j // 3) in seen):
-          return False
-        seen.add(c + '@row ' + str(i))
-        seen.add(c + '@col ' + str(j))
-        seen.add(c + '@box ' + str(i // 3) + str(j // 3))
 
-    return True
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
+
+        # Initialize a set to keep track of seen numbers along with their positions
+        seen = set()
+
+        # Iterate through each row (i) of the board
+        for i in range(9):
+
+            # Iterate through each column (j) of the board
+            for j in range(9):
+
+                # Get the current cell value
+                c = board[i][j]
+                # If the cell is empty ('.'), skip it
+                if c == '.':
+                    continue
+
+                # Check if the number 'c' is already seen in the current row, column, or 3x3 sub-box
+
+                if (c + '@row ' + str(i) in seen or   # Check if 'c' exists in the current row
+                    c + '@col ' + str(j) in seen or   # Check if 'c' exists in the current column
+                    c + '@box ' + str(i // 3) + str(j // 3) in seen):  # Check if 'c' exists in the current 3x3 sub-box
+                    return False 
+                    # Return False if any of the conditions above are true
+
+                # Add the current number with its row information to the set
+                seen.add(c + '@row ' + str(i))
+
+                # Add the current number with its column information to the set
+                seen.add(c + '@col ' + str(j))
+
+                # Add the current number with its 3x3 sub-box information to the set
+                seen.add(c + '@box ' + str(i // 3) + str(j // 3))
+
+        # If no conflicts are found, return True (the board is valid)
+        return True
