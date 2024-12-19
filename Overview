@@ -20,4 +20,11 @@ A **digital clock** in Python is a simple project that displays the current time
 - **User Interface**: Displays the clock in a GUI with customization options for fonts, colors, and layout.  
 - **Optional Add-Ons**: Adding features like alarms or time zone support for an advanced version.  
 
+### Python Sudoku Validator  
+The **Sudoku Validator** project is a Python-based solution that verifies the validity of a 9x9 Sudoku board. It ensures compliance with Sudoku rules using an efficient approach. Key features include:  
+- **Rule Compliance**: Checks for duplicate numbers in rows, columns, and 3x3 sub-boxes.  
+- **Optimized Performance**: Utilizes a `set` to track seen elements, ensuring efficient validation.  
+- **Scalability**: Modular design allows for easy integration into larger Sudoku-solving applications.  
+- **Customizable Extensions** (optional): Additional features like error highlighting and board generation can be added for enhanced functionality.  
+
 Each of these projects reinforces foundational programming concepts, such as loops, conditional logic, and using libraries for specific functionalities.
