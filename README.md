@@ -4,7 +4,8 @@
 This repository contains three Python mini-projects showcasing fundamental programming concepts and creative implementations:  
 1. **Snake Game**  
 2. **Tic Tac Toe Game**  
-3. **Digital Clock**  
+3. **Digital Clock**
+4. **Sudoku Validator** 
 
 Each project demonstrates problem-solving skills, Python libraries, and user-friendly interfaces.
 
@@ -40,6 +41,16 @@ A real-time digital clock application displaying the current time in a simple an
   Run the script to display a live clock in a GUI window.  
 
 ---
+
+#### 4. Sudoku Validator  
+The **Sudoku Validator** is a Python-based tool to check the validity of a 9x9 Sudoku board, ensuring it follows all standard rules.  
+- **Features**:  
+  - Detects duplicates in rows, columns, and sub-grids.  
+  - Handles empty cells seamlessly for incomplete boards.  
+  - Simple and efficient logic for fast validation.  
+- **Technologies Used**: Core Python with logical operations.  
+- **How to Run**:  
+  Input a 9x9 board (list of lists) into the `isValidSudoku` method and receive a `True` or `False` result for validity.  
 
 ### Requirements  
 - Python 3.9+  
